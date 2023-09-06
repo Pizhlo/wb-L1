@@ -20,8 +20,9 @@ func calculateSquare(arr []int) {
 		wg.Add(1)
 		go func(item int) {
 			fmt.Println(item * item)
-			wg.Done()
+			defer wg.Done()
 		}(val)
-		wg.Wait()
+
 	}
+	wg.Wait()
 }

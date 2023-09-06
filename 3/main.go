@@ -21,10 +21,11 @@ func calcSum(arr []int) int {
 		wg.Add(1)
 		go func(item int) {
 			res += item * item
-			wg.Done()
+			defer wg.Done()
 		}(val)
-		wg.Wait()
 	}
+
+	wg.Wait()
 
 	return res
 
