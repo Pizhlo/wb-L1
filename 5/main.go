@@ -35,5 +35,5 @@ func main() {
 
 	// ожидаем N секунд и завершаем программу
 	time.Sleep(sec * time.Second)
-	fmt.Println("Program finished")
+	fmt.Println("Программа завершена")
 }
