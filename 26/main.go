@@ -12,10 +12,10 @@ import "fmt"
 func main() {
 	s := "aA"
 
-	fmt.Println(unique(s))
+	fmt.Println(isUnique(s))
 }
 
-func unique(s string) bool {
+func isUnique(s string) bool {
 	m := map[string]struct{}{}
 
 	for i := 0; i < len(s); i++ {
